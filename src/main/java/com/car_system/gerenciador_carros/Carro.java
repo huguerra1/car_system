@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.car_system.gerenciador_carros;
 
 import jakarta.persistence.*;
@@ -14,7 +10,12 @@ public class Carro {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, length = 60)
     private String marca;
+
+    @Column(nullable = false, length = 60)
     private String modelo;
+
+    @Column(nullable = false)
     private Integer ano;
 }
